@@ -1,35 +1,101 @@
 [
   {
-    "name":"Navigate hotel sections and room selector",
-    "sanity":true,
-    "viewport":"desktop",
-    "covers":["main navigation","room selector","dining section","amenities section"],
-    "description":"Verifies the primary hotel browsing experience works end to end.",
-    "steps":["Open Hotel Kishan","Navigate to Rooms, Dining and Amenities","Select a different room category"],
-    "expected":"Each section is reachable and the selected room changes the explanatory copy."
+    "name": "Desktop information architecture",
+    "viewport": "desktop",
+    "covers": [
+      "utility strip",
+      "primary navigation",
+      "hero",
+      "stay",
+      "dining",
+      "amenities",
+      "gallery",
+      "location",
+      "booking",
+      "footer"
+    ],
+    "expected": "All required sections exist and anchor navigation targets are present."
   },
   {
-    "name":"Use mobile hotel navigation",
-    "viewport":"mobile",
-    "covers":["responsive navigation","mobile action bar","responsive gallery"],
-    "description":"Verifies the redesigned layout remains usable on a phone.",
-    "steps":["Open the site on mobile","Open the navigation menu","Use the Rooms or Contact action"],
-    "expected":"The menu and mobile actions are usable without layout breakage."
+    "name": "Room selector interaction",
+    "viewport": "desktop",
+    "covers": [
+      "five room categories",
+      "selected state",
+      "dynamic room copy",
+      "dynamic room image"
+    ],
+    "expected": "Selecting any room updates image, title, description and amenity pills."
   },
   {
-    "name":"Open the property gallery",
-    "viewport":"desktop",
-    "covers":["gallery lightbox","public photo presentation"],
-    "description":"Verifies gallery images open as a lightbox.",
-    "steps":["Open Gallery","Click a gallery image","Close the image overlay"],
-    "expected":"The selected image opens in a lightbox and can be closed."
+    "name": "Mobile navigation and sticky actions",
+    "viewport": "mobile",
+    "covers": [
+      "drawer",
+      "focusable menu control",
+      "Call",
+      "Directions",
+      "Book"
+    ],
+    "expected": "The mobile menu opens/closes and the bottom action rail provides working phone, Maps and booking links."
   },
   {
-    "name":"Use booking and contact CTAs",
-    "viewport":"desktop",
-    "covers":["booking CTA","telephone CTA","maps CTA"],
-    "description":"Verifies the key outbound hotel conversion actions are present.",
-    "steps":["Open the Rooms section","Use Check live rates","Open Contact and use the call or maps action"],
-    "expected":"Booking, phone and maps actions remain clickable and point to public hotel channels."
+    "name": "Gallery lightbox",
+    "viewport": "desktop+mobile",
+    "covers": [
+      "six property images",
+      "open",
+      "previous",
+      "next",
+      "close",
+      "Escape"
+    ],
+    "expected": "Gallery images open in an accessible modal; previous/next, backdrop close and Escape are wired."
+  },
+  {
+    "name": "Booking and contact channels",
+    "viewport": "desktop+mobile",
+    "covers": [
+      "Goibibo",
+      "MakeMyTrip",
+      "three phone links",
+      "Google Maps"
+    ],
+    "expected": "All primary conversion links are present and point to the intended public hotel channels."
+  },
+  {
+    "name": "Accessibility baseline",
+    "viewport": "desktop+mobile",
+    "covers": [
+      "one H1",
+      "semantic landmarks",
+      "focus-visible",
+      "44px mobile controls",
+      "meaningful image alts",
+      "reduced motion"
+    ],
+    "expected": "The page has one H1, semantic navigation/sections, keyboard focus, accessible modal controls and reduced-motion support."
+  },
+  {
+    "name": "SEO and structured data",
+    "viewport": "source",
+    "covers": [
+      "title",
+      "description",
+      "OpenGraph",
+      "Hotel JSON-LD"
+    ],
+    "expected": "SEO metadata and factual Hotel structured data are present without invented ratings or pricing."
+  },
+  {
+    "name": "Static integrity guard",
+    "viewport": "source",
+    "covers": [
+      "JavaScript syntax",
+      "required IDs/classes",
+      "no AppDeploy",
+      "no competitor URLs"
+    ],
+    "expected": "Embedded JavaScript parses and the source contains no AppDeploy deployment code or copied competitor URLs/assets."
   }
 ]
