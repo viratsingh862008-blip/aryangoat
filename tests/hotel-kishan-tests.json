@@ -1,0 +1,35 @@
+[
+  {
+    "name":"Navigate hotel sections and room selector",
+    "sanity":true,
+    "viewport":"desktop",
+    "covers":["main navigation","room selector","dining section","amenities section"],
+    "description":"Verifies the primary hotel browsing experience works end to end.",
+    "steps":["Open Hotel Kishan","Navigate to Rooms, Dining and Amenities","Select a different room category"],
+    "expected":"Each section is reachable and the selected room changes the explanatory copy."
+  },
+  {
+    "name":"Use mobile hotel navigation",
+    "viewport":"mobile",
+    "covers":["responsive navigation","mobile action bar","responsive gallery"],
+    "description":"Verifies the redesigned layout remains usable on a phone.",
+    "steps":["Open the site on mobile","Open the navigation menu","Use the Rooms or Contact action"],
+    "expected":"The menu and mobile actions are usable without layout breakage."
+  },
+  {
+    "name":"Open the property gallery",
+    "viewport":"desktop",
+    "covers":["gallery lightbox","public photo presentation"],
+    "description":"Verifies gallery images open as a lightbox.",
+    "steps":["Open Gallery","Click a gallery image","Close the image overlay"],
+    "expected":"The selected image opens in a lightbox and can be closed."
+  },
+  {
+    "name":"Use booking and contact CTAs",
+    "viewport":"desktop",
+    "covers":["booking CTA","telephone CTA","maps CTA"],
+    "description":"Verifies the key outbound hotel conversion actions are present.",
+    "steps":["Open the Rooms section","Use Check live rates","Open Contact and use the call or maps action"],
+    "expected":"Booking, phone and maps actions remain clickable and point to public hotel channels."
+  }
+]
