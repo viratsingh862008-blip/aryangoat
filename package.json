@@ -1,0 +1,9 @@
+{
+  "name":"super-aryan-hotel-parth",
+  "private":true,
+  "type":"module",
+  "version":"1.0.0",
+  "description":"Hotel Parth Bettiah experience website by Super Aryan.",
+  "scripts":{"test":"node --test tests/site.test.js"},
+  "engines":{"node":">=20"}
+}
