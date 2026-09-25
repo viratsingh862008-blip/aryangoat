@@ -20,8 +20,8 @@
       --paper:#faf7f1;
       --stone:#ddd4c7;
       --stone-2:#c9bfb2;
-      --muted:#6f6b65;
-      --brass:#b38b5b;
+      --muted:#55514b;
+      --brass:#76552d;
       --red:#8e302b;
       --white:#fff;
       --line:rgba(23,23,23,.14);
@@ -95,7 +95,7 @@
       display:flex;
       justify-content:space-between;
       gap:18px;
-      color:#5e5a55;
+      color:#49453f;
     }
 
     header.nav{
@@ -149,7 +149,7 @@
       font:500 10px/1 'DM Mono',monospace;
       letter-spacing:.09em;
       text-transform:uppercase;
-      color:#54514d;
+      color:#403d38;
     }
     .nav-links a:after{
       content:"";
@@ -218,11 +218,11 @@
     .hero h1{margin:14px 0 18px;font-size:clamp(64px,9vw,132px);white-space:nowrap}
     .hero-copy{
       max-width:650px;
-      color:rgba(255,255,255,.79);
+      color:rgba(255,255,255,.9);
       font-size:15px;
     }
     .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-    .hero-detail{margin-top:32px;color:rgba(255,255,255,.7);letter-spacing:.12em}
+    .hero-detail{margin-top:32px;color:rgba(255,255,255,.86);letter-spacing:.12em}
     .hero-detail span{padding:0 8px;color:#d6b083}
     .hero-side{
       padding:22px;
@@ -243,13 +243,13 @@
     }
     .hero-side .meta:last-child{border-right:0;padding-left:14px;padding-right:0}
     .hero-side .meta b{display:block;font:500 20px/1.1 'Cormorant Garamond',Georgia,serif;margin-top:4px}
-    .hero-side p{margin:16px 0 0;color:rgba(255,255,255,.66);font-size:12px}
+    .hero-side p{margin:16px 0 0;color:rgba(255,255,255,.82);font-size:12px}
     .hero-bottom{
       position:relative;
       z-index:2;
       border-top:1px solid var(--line-light);
       padding:14px 0 16px;
-      color:rgba(255,255,255,.58);
+      color:rgba(255,255,255,.78);
       font:400 9px/1.2 'DM Mono',monospace;
       text-transform:uppercase;
       letter-spacing:.1em;
@@ -346,7 +346,7 @@
     .room-pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}
     .room-pill{padding:8px 10px;border:1px solid var(--line);font:500 8px/1 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
     .room-copy .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-    .live-note{margin-top:12px;color:#8a857e;font-size:10px}
+    .live-note{margin-top:12px;color:#5c564e;font-size:10px}
 
     .dark{
       background:var(--charcoal);
@@ -354,7 +354,7 @@
       position:relative;
       overflow:hidden;
     }
-    .dark .section-head p{color:rgba(255,255,255,.58)}
+    .dark .section-head p{color:rgba(255,255,255,.78)}
     .dining-grid{
       display:grid;
       grid-template-columns:1.1fr .9fr;
@@ -368,7 +368,7 @@
       display:flex;justify-content:space-between;gap:20px;align-items:flex-end;
     }
     .caption h3{margin:0;font:500 clamp(48px,6vw,92px)/.86 'Cormorant Garamond',Georgia,serif}
-    .caption span{max-width:260px;color:rgba(255,255,255,.64);font-size:12px;text-align:right}
+    .caption span{max-width:260px;color:rgba(255,255,255,.82);font-size:12px;text-align:right}
     .dining-panel{
       min-height:620px;border:1px solid var(--line-light);padding:36px;
       display:flex;flex-direction:column;justify-content:space-between;
@@ -385,7 +385,7 @@
       padding:15px 0;border-bottom:1px solid var(--line-light);
       font-size:12px;
     }
-    .dining-row span:last-child{color:rgba(255,255,255,.5);font:500 8px/1.2 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.1em}
+    .dining-row span:last-child{color:rgba(255,255,255,.76);font:500 8px/1.2 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.1em}
     .dining-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 
     .amenities{
@@ -424,7 +424,7 @@
       background:rgba(0,0,0,.32);color:#fff;
       display:grid;place-items:center;
     }
-    .gallery-note{margin-top:14px;color:#858078;font-size:10px}
+    .gallery-note{margin-top:14px;color:#5c564e;font-size:10px}
 
     .location-grid{
       display:grid;
@@ -463,7 +463,7 @@
     .map-marker:after{content:"";width:13px;height:13px;border-radius:50%;background:var(--red);display:block}
     .map-copy{position:relative;z-index:1;max-width:360px}
     .map-copy h3{margin:6px 0 10px;font:500 52px/.9 'Cormorant Garamond',Georgia,serif}
-    .map-copy p{margin:0 0 20px;color:rgba(255,255,255,.56);font-size:12px}
+    .map-copy p{margin:0 0 20px;color:rgba(255,255,255,.78);font-size:12px}
 
     .booking-strip{background:var(--ink);color:#fff;padding:28px 0}
     .booking-inner{display:flex;justify-content:space-between;gap:28px;align-items:center}
@@ -481,10 +481,10 @@
       gap:34px;
     }
     footer h3{margin:0;font:500 42px/.9 'Cormorant Garamond',Georgia,serif}
-    footer p,footer a{font-size:11px;color:rgba(255,255,255,.55)}
+    footer p,footer a{font-size:11px;color:rgba(255,255,255,.78)}
     footer .footer-title{color:#fff;font:500 9px/1 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase}
     .footer-stack{display:grid;gap:10px;margin-top:15px}
-    .rights-note{padding-top:35px;margin-top:35px;border-top:1px solid rgba(255,255,255,.11);color:rgba(255,255,255,.35);font-size:9px;line-height:1.6}
+    .rights-note{padding-top:35px;margin-top:35px;border-top:1px solid rgba(255,255,255,.11);color:rgba(255,255,255,.72);font-size:9px;line-height:1.6}
 
     .mobile-rail{
       display:none;
@@ -532,7 +532,7 @@
     .lightbox-next{right:18px;top:50%;transform:translateY(-50%)}
     .lightbox .caption{
       position:absolute;left:50%;bottom:18px;transform:translateX(-50%);
-      max-width:80vw;color:rgba(255,255,255,.65);
+      max-width:80vw;color:rgba(255,255,255,.82);
       font:400 10px/1.4 'DM Mono',monospace;text-align:center;text-transform:uppercase;letter-spacing:.08em
     }
 
@@ -558,23 +558,23 @@
     .event-photo img{width:100%;height:100%;min-height:520px;object-fit:cover}
     .event-note{padding:clamp(28px,4vw,58px);background:var(--charcoal);color:#fff;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
     .event-note h3{font-size:clamp(54px,7vw,92px);line-height:.9;margin:24px 0}
-    .event-note p{max-width:430px;color:rgba(255,255,255,.66);margin:0 0 28px}
+    .event-note p{max-width:430px;color:rgba(255,255,255,.82);margin:0 0 28px}
     .about-section{background:var(--paper)}
     .about-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .about-tile{position:relative;min-height:460px;overflow:hidden;background:var(--charcoal);color:#fff;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
     .about-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.78) 100%);z-index:-1}
     .about-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s var(--ease)}
     .about-tile:hover img{transform:scale(1.04)}
-    .about-tile span{font:500 9px/1 'DM Mono',monospace;letter-spacing:.13em;color:rgba(255,255,255,.7)}
+    .about-tile span{font:500 9px/1 'DM Mono',monospace;letter-spacing:.13em;color:rgba(255,255,255,.86)}
     .about-tile strong{font:500 clamp(34px,4vw,56px)/.92 'Cormorant Garamond',Georgia,serif;margin:18px 0}
     .about-tile strong em{color:#e0bd91}
     .about-tile b{font:500 9px/1 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
     .contact-grid h2{font-size:clamp(64px,9vw,112px);margin:22px 0}
-    .contact-grid>div:first-child p{max-width:470px;color:rgba(255,255,255,.65)}
+    .contact-grid>div:first-child p{max-width:470px;color:rgba(255,255,255,.82)}
     .contact-actions{border-top:1px solid var(--line-light)}
     .contact-line{display:grid;grid-template-columns:1fr auto;gap:8px 18px;padding:20px 0;border-bottom:1px solid var(--line-light);align-items:center}
-    .contact-line span{grid-column:1/-1;font:500 9px/1 'DM Mono',monospace;letter-spacing:.12em;color:rgba(255,255,255,.5)}
+    .contact-line span{grid-column:1/-1;font:500 9px/1 'DM Mono',monospace;letter-spacing:.12em;color:rgba(255,255,255,.76)}
     .contact-line strong{font:500 clamp(20px,2.4vw,30px)/1.1 'Cormorant Garamond',Georgia,serif}
     .contact-line i{font-style:normal;color:#d6b083}
     [data-reveal-item]{will-change:transform,opacity,filter}
@@ -944,27 +944,27 @@
         <div class="gallery-grid reveal" role="list">
           <figure class="gallery-item" role="listitem">
             <img src="https://r1imghtlak.mmtcdn.com/6ab623be-5fd5-43d1-b8d6-56f4dea24767.jpg" alt="Exterior of Hotel Kishan on Supriya Cinema Road" loading="lazy">
-            <button type="button" class="gallery-open" data-src="https://r1imghtlak.mmtcdn.com/6ab623be-5fd5-43d1-b8d6-56f4dea24767.jpg" data-caption="Hotel Kishan facade" aria-label="Open Hotel Kishan facade image">↗</button>
+            <button type="button" class="gallery-open" data-src="https://r1imghtlak.mmtcdn.com/6ab623be-5fd5-43d1-b8d6-56f4dea24767.jpg" data-caption="Hotel Kishan facade" aria-label="↗ Open Hotel Kishan facade image">↗</button>
           </figure>
           <figure class="gallery-item" role="listitem">
             <img src="https://r1imghtlak.mmtcdn.com/2f29580d-c235-4cc3-b550-19943547c110.jpg" alt="Warmly lit Hotel Kishan guest room" loading="lazy">
-            <button type="button" class="gallery-open" data-src="https://r1imghtlak.mmtcdn.com/2f29580d-c235-4cc3-b550-19943547c110.jpg" data-caption="Guest room" aria-label="Open guest room image">↗</button>
+            <button type="button" class="gallery-open" data-src="https://r1imghtlak.mmtcdn.com/2f29580d-c235-4cc3-b550-19943547c110.jpg" data-caption="Guest room" aria-label="↗ Open guest room image">↗</button>
           </figure>
           <figure class="gallery-item" role="listitem">
             <img src="https://r1imghtlak.ibcdn.com/dbf4e08f-98bf-4526-bceb-622f23369827.jpg?crop=520%3A350%3B2%2C0&downsize=520%3A350&output-format=webp&output-quality=75" alt="Hotel Kishan property photo" loading="lazy">
-            <button type="button" class="gallery-open" data-src="https://r1imghtlak.ibcdn.com/dbf4e08f-98bf-4526-bceb-622f23369827.jpg?crop=520%3A350%3B2%2C0&downsize=520%3A350&output-format=webp&output-quality=75" data-caption="Property photo" aria-label="Open property image">↗</button>
+            <button type="button" class="gallery-open" data-src="https://r1imghtlak.ibcdn.com/dbf4e08f-98bf-4526-bceb-622f23369827.jpg?crop=520%3A350%3B2%2C0&downsize=520%3A350&output-format=webp&output-quality=75" data-caption="Property photo" aria-label="↗ Open property image">↗</button>
           </figure>
           <figure class="gallery-item" role="listitem">
             <img src="https://r1imghtlak.ibcdn.com/76773e99-89c5-458e-9ce1-23f6d9d8117a.jpg?crop=520%3A350%3B0%2C215&downsize=520%3A350&output-format=webp&output-quality=75" alt="Hotel Kishan property interior photo" loading="lazy">
-            <button type="button" class="gallery-open" data-src="https://r1imghtlak.ibcdn.com/76773e99-89c5-458e-9ce1-23f6d9d8117a.jpg?crop=520%3A350%3B0%2C215&downsize=520%3A350&output-format=webp&output-quality=75" data-caption="Property interior" aria-label="Open interior image">↗</button>
+            <button type="button" class="gallery-open" data-src="https://r1imghtlak.ibcdn.com/76773e99-89c5-458e-9ce1-23f6d9d8117a.jpg?crop=520%3A350%3B0%2C215&downsize=520%3A350&output-format=webp&output-quality=75" data-caption="Property interior" aria-label="↗ Open interior image">↗</button>
           </figure>
           <figure class="gallery-item" role="listitem">
             <img src="https://r1imghtlak.ibcdn.com/534db602-727f-4a67-ab86-4cf4b1a9d3dd.jpg?crop=520%3A350%3B2%2C0&downsize=520%3A350&output-format=webp&output-quality=75" alt="Hotel Kishan public listing photo" loading="lazy">
-            <button type="button" class="gallery-open" data-src="https://r1imghtlak.ibcdn.com/534db602-727f-4a67-ab86-4cf4b1a9d3dd.jpg?crop=520%3A350%3B2%2C0&downsize=520%3A350&output-format=webp&output-quality=75" data-caption="Property photo" aria-label="Open property image">↗</button>
+            <button type="button" class="gallery-open" data-src="https://r1imghtlak.ibcdn.com/534db602-727f-4a67-ab86-4cf4b1a9d3dd.jpg?crop=520%3A350%3B2%2C0&downsize=520%3A350&output-format=webp&output-quality=75" data-caption="Property photo" aria-label="↗ Open property image">↗</button>
           </figure>
           <figure class="gallery-item" role="listitem">
             <img src="https://r1imghtlak.ibcdn.com/5d4c38d6-97c3-46a2-82a6-5075ca4a9790.jpg" alt="Hotel Kishan public listing photo" loading="lazy">
-            <button type="button" class="gallery-open" data-src="https://r1imghtlak.ibcdn.com/5d4c38d6-97c3-46a2-82a6-5075ca4a9790.jpg" data-caption="Property photo" aria-label="Open property image">↗</button>
+            <button type="button" class="gallery-open" data-src="https://r1imghtlak.ibcdn.com/5d4c38d6-97c3-46a2-82a6-5075ca4a9790.jpg" data-caption="Property photo" aria-label="↗ Open property image">↗</button>
           </figure>
         </div>
         <div class="gallery-note">Demo photography is sourced from public Hotel Kishan booking listings. Replace with owner-supplied/licensed originals before production launch.</div>
@@ -1123,9 +1123,9 @@
   </div>
 
   <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Hotel Kishan image viewer">
-    <button class="lightbox-close" type="button" aria-label="Close image viewer">×</button>
-    <button class="lightbox-prev" type="button" aria-label="Previous image">←</button>
-    <button class="lightbox-next" type="button" aria-label="Next image">→</button>
+    <button class="lightbox-close" type="button" aria-label="× Close image viewer">×</button>
+    <button class="lightbox-prev" type="button" aria-label="← Previous image">←</button>
+    <button class="lightbox-next" type="button" aria-label="→ Next image">→</button>
     <img id="lightboxImage" src="" alt="">
     <div id="lightboxCaption" class="caption"></div>
   </div>
