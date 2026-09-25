@@ -88,6 +88,18 @@
     "expected": "SEO metadata and factual Hotel structured data are present without invented ratings or pricing."
   },
   {
+    "name": "Branding and clean visual hierarchy",
+    "viewport": "desktop+mobile",
+    "covers": [
+      "HK facade-inspired roundel",
+      "single-line hero title",
+      "no floating hero detail panel",
+      "smooth reveal motion",
+      "reduced-motion support"
+    ],
+    "expected": "The header uses the compact HK mark, hero copy remains clean and readable without layered panels, and motion stays subtle."
+  },
+  {
     "name": "Static integrity guard",
     "viewport": "source",
     "covers": [
