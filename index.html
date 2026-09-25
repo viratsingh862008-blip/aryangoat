@@ -119,11 +119,15 @@
       gap:12px;
       min-width:0;
     }
+    /* Compact HK roundel, echoing the circular mark visible on the hotel's facade. */
     .brand-mark{
-      width:42px;height:42px;border:1px solid var(--ink);
+      width:44px;height:44px;border:1px solid #a94a42;
       border-radius:50%;
       display:grid;place-items:center;
-      font:600 13px/1 Manrope,sans-serif;
+      color:#fff;background:#8e302b;
+      box-shadow:inset 0 0 0 3px rgba(255,255,255,.16);
+      font:700 12px/1 Manrope,sans-serif;
+      letter-spacing:-.06em;
       flex:0 0 auto;
     }
     .brand-copy strong{
@@ -197,26 +201,24 @@
       will-change:transform;
     }
     .hero-shade{
-      background:
-        linear-gradient(180deg,rgba(0,0,0,.16) 0%,rgba(0,0,0,.18) 30%,rgba(0,0,0,.86) 100%),
-        linear-gradient(90deg,rgba(0,0,0,.32) 0%,rgba(0,0,0,.1) 50%,rgba(0,0,0,.3) 100%);
+      background:linear-gradient(90deg,rgba(13,13,12,.68) 0%,rgba(13,13,12,.34) 62%,rgba(13,13,12,.18) 100%);
     }
     .hero-inner{
       position:relative;
       z-index:2;
       padding:84px 0 30px;
-      display:grid;
-      grid-template-columns:minmax(0,1fr) 340px;
-      gap:34px;
-      align-items:end;
+      display:block;
+      max-width:var(--max);
     }
-    .hero h1{margin:14px 0 18px;font-size:clamp(88px,12vw,170px)}
+    .hero h1{margin:14px 0 18px;font-size:clamp(64px,9vw,132px);white-space:nowrap}
     .hero-copy{
       max-width:650px;
       color:rgba(255,255,255,.79);
       font-size:15px;
     }
     .hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+    .hero-detail{margin-top:32px;color:rgba(255,255,255,.7);letter-spacing:.12em}
+    .hero-detail span{padding:0 8px;color:#d6b083}
     .hero-side{
       padding:22px;
       border:1px solid rgba(255,255,255,.19);
@@ -530,15 +532,24 @@
       font:400 10px/1.4 'DM Mono',monospace;text-align:center;text-transform:uppercase;letter-spacing:.08em
     }
 
-    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-    .reveal.in{opacity:1;transform:none}
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .75s cubic-bezier(.22,.61,.36,1),transform .75s cubic-bezier(.22,.61,.36,1);will-change:opacity,transform}
+    .reveal.in{opacity:1;transform:translateY(0)}
+    @media (hover:hover){
+      .gallery-item img{transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+      .btn:hover{transform:translateY(-1px)}
+    }
+    @media (max-width:760px){
+      .hero-shade{background:linear-gradient(90deg,rgba(13,13,12,.66),rgba(13,13,12,.3))}
+      .hero-inner{padding-top:48px}
+      .hero h1{max-width:100%;line-height:.98}
+    }
 
     @media (max-width:1020px){
       .nav-inner{grid-template-columns:1fr auto}
       .nav-links,.nav-actions .call-link{display:none}
       .nav-actions{gap:0}
       .menu-btn{display:block}
-      .hero-inner{grid-template-columns:1fr}
+      .hero-inner{display:block}
       .hero-side{max-width:480px}
       .story-grid{grid-template-columns:1fr;gap:46px}
       .story-image{max-width:700px}
@@ -569,9 +580,10 @@
       .section-head p{margin-top:18px}
       .hero{min-height:calc(100svh - 98px)}
       .hero-inner{padding:58px 0 22px}
-      .hero h1{font-size:clamp(72px,22vw,120px)}
+      .hero h1{font-size:clamp(48px,12.5vw,86px);white-space:normal;letter-spacing:-.055em}
       .hero-copy{font-size:14px}
       .hero-side{max-width:none;padding:18px}
+      .hero-detail{font-size:9px;line-height:1.8;max-width:320px}
       .hero-bottom .inner{display:block}
       .hero-bottom .scroll-dot{margin-top:10px}
       .fact-row{grid-template-columns:1fr}
@@ -666,7 +678,7 @@
       <div class="shell hero-inner reveal in">
         <div>
           <div class="micro eyebrow" style="color:#d6b083">KAMALNATH NAGAR · BETTIAH</div>
-          <h1 id="hero-title" class="serif">HOTEL<br>KISHAN</h1>
+          <h1 id="hero-title" class="serif">HOTEL KISHAN</h1>
           <p class="hero-copy">A straightforward Bettiah stay with five room categories, on-property dining, and simple routes to the local city centre.</p>
           <div class="hero-cta">
             <a class="btn btn-light" href="https://www.goibibo.com/hotels/kishan-hotel-in-bettiah-4667815554817029647/" target="_blank" rel="noopener noreferrer">Check availability</a>
@@ -674,20 +686,7 @@
           </div>
         </div>
 
-        <aside class="hero-side" aria-label="Property details">
-          <div class="micro" style="color:#d6b083">AT A GLANCE</div>
-          <div class="meta-grid">
-            <div class="meta">
-              <span class="micro" style="color:rgba(255,255,255,.5)">ROOM TYPES</span>
-              <b>05</b>
-            </div>
-            <div class="meta">
-              <span class="micro" style="color:rgba(255,255,255,.5)">DINING</span>
-              <b>On site</b>
-            </div>
-          </div>
-          <p>Check-in 2 PM · Check-out 12 PM. Booking rates and room inventory remain live on the linked booking partners.</p>
-        </aside>
+        <div class="hero-detail micro">5 ROOM CATEGORIES <span aria-hidden="true">·</span> ON-PROPERTY DINING <span aria-hidden="true">·</span> BETTIAH</div>
       </div>
 
       <div class="hero-bottom">
@@ -706,7 +705,7 @@
         </div>
         <div class="story-copy reveal">
           <div class="micro eyebrow">THE PROPERTY</div>
-          <h2 class="serif">A stay<br>in Bettiah.</h2>
+          <h2 class="serif">A stay in Bettiah.</h2>
           <p class="lead">Hotel Kishan sits in Kamalnath Nagar on Supriya Cinema Road, with rooms and an on-property restaurant in one easy-to-find city location.</p>
           <p>Public booking listings currently show five room categories, a restaurant, room service, power backup, elevator/lift, refrigerator and smoking rooms. Details and rates should always be reconfirmed with the property or live booking channel before travel.</p>
 
@@ -791,7 +790,7 @@
         <div class="section-head reveal">
           <div>
             <div class="micro" style="color:#d6b083">DINING</div>
-            <h2 class="serif">Kishan Sweets<br>& Restaurant.</h2>
+            <h2 class="serif">Kishan Sweets &amp; Restaurant.</h2>
           </div>
           <p>The property facade itself presents the dining offer alongside the hotel entrance, giving this section a stronger sense of place than a generic food card.</p>
         </div>
@@ -922,7 +921,7 @@
       <div class="shell location-grid">
         <div class="location-copy reveal">
           <div class="micro eyebrow">LOCATION</div>
-          <h2 class="serif">Find<br>your way.</h2>
+          <h2 class="serif">Find your way.</h2>
           <p class="address">GROUND, 424, M/S HOTEL KISHAN, SUPRIYA CINEMA ROAD, KAMALNATH NAGAR, BETTIAH, WEST CHAMPARAN, BIHAR 845438.</p>
 
           <div class="phone-list" aria-label="Hotel phone numbers">
@@ -937,7 +936,7 @@
           <div class="map-marker" aria-hidden="true"></div>
           <div class="map-copy">
             <div class="micro" style="color:#d6b083">BETTIAH · BIHAR</div>
-            <h3>Supriya<br>Cinema Road.</h3>
+            <h3>Supriya Cinema Road.</h3>
             <p>Use the map link for current directions and the phone links for property-level confirmation.</p>
             <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=HOTEL%20KISHAN%2C%20Supriya%20Cinema%20Road%2C%20Bettiah%2C%20Bihar%20845438" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
           </div>
