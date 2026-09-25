@@ -286,3 +286,10 @@ DO:
 - Phone, Maps, Goibibo, and MakeMyTrip CTAs are present.
 - HTML/JS structure is valid.
 - No AppDeploy deployment is created or used.
+
+
+## Visual refinement — September 2026
+- Keep the hero focused on one clean “HOTEL KISHAN” headline and a concise line of factual context; remove the floating property-details panel and stacked headline treatment.
+- Use a compact circular HK roundel in the header, based on the circular HK mark visible in the hotel's public facade photograph; do not substitute another hotel's logo.
+- Keep section headlines naturally flowing rather than forcing stacked line breaks. Use restrained overlays, calm reveal transitions, and reduced-motion support.
+- Preserve the existing working room selector, mobile drawer and action rail, gallery lightbox, amenities, booking links, phone actions, and directions.
