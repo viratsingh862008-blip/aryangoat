@@ -109,5 +109,22 @@
       "no competitor URLs"
     ],
     "expected": "Embedded JavaScript parses and the source contains no AppDeploy deployment code or copied competitor URLs/assets."
+  },
+  {
+    "name": "Triple Crown motion and section parity",
+    "viewport": "desktop+mobile",
+    "covers": [
+      "scroll progress bar",
+      "marquee ribbon",
+      "smooth Lenis scrolling",
+      "GSAP staggered reveal",
+      "scroll-linked image parallax",
+      "event enquiry section",
+      "about tiles",
+      "contact actions",
+      "responsive navigation anchors",
+      "reduced-motion fallback"
+    ],
+    "expected": "Hotel Kishan uses the same core scroll and section interaction patterns as Triple Crown, adapted to its own verified content and contact channels."
   }
 ]
