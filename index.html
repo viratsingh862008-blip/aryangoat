@@ -544,6 +544,41 @@
       .hero h1{max-width:100%;line-height:.98}
     }
 
+    .tc-progress{position:fixed;z-index:200;top:0;left:0;right:0;height:3px;background:var(--brass);transform:scaleX(0);transform-origin:left center;pointer-events:none}
+    .tc-ribbon{overflow:hidden;background:var(--ink);color:var(--paper);white-space:nowrap;padding:17px 0;font:500 clamp(30px,5vw,70px)/1 'Cormorant Garamond',Georgia,serif}
+    .tc-ribbon>div{width:max-content;animation:tcMarquee 26s linear infinite}
+    .tc-ribbon i{color:var(--brass);font-style:normal}
+    @keyframes tcMarquee{to{transform:translateX(-50%)}}
+    .event-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:stretch}
+    .event-photo{min-height:520px;overflow:hidden;background:var(--stone)}
+    .event-photo img{width:100%;height:100%;min-height:520px;object-fit:cover}
+    .event-note{padding:clamp(28px,4vw,58px);background:var(--charcoal);color:#fff;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+    .event-note h3{font-size:clamp(54px,7vw,92px);line-height:.9;margin:24px 0}
+    .event-note p{max-width:430px;color:rgba(255,255,255,.66);margin:0 0 28px}
+    .about-section{background:var(--paper)}
+    .about-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .about-tile{position:relative;min-height:460px;overflow:hidden;background:var(--charcoal);color:#fff;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;isolation:isolate}
+    .about-tile:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 20%,rgba(0,0,0,.78) 100%);z-index:-1}
+    .about-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s var(--ease)}
+    .about-tile:hover img{transform:scale(1.04)}
+    .about-tile span{font:500 9px/1 'DM Mono',monospace;letter-spacing:.13em;color:rgba(255,255,255,.7)}
+    .about-tile strong{font:500 clamp(34px,4vw,56px)/.92 'Cormorant Garamond',Georgia,serif;margin:18px 0}
+    .about-tile strong em{color:#e0bd91}
+    .about-tile b{font:500 9px/1 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .contact-grid h2{font-size:clamp(64px,9vw,112px);margin:22px 0}
+    .contact-grid>div:first-child p{max-width:470px;color:rgba(255,255,255,.65)}
+    .contact-actions{border-top:1px solid var(--line-light)}
+    .contact-line{display:grid;grid-template-columns:1fr auto;gap:8px 18px;padding:20px 0;border-bottom:1px solid var(--line-light);align-items:center}
+    .contact-line span{grid-column:1/-1;font:500 9px/1 'DM Mono',monospace;letter-spacing:.12em;color:rgba(255,255,255,.5)}
+    .contact-line strong{font:500 clamp(20px,2.4vw,30px)/1.1 'Cormorant Garamond',Georgia,serif}
+    .contact-line i{font-style:normal;color:#d6b083}
+    [data-reveal-item]{will-change:transform,opacity,filter}
+    [data-parallax]{will-change:transform}
+    .reveal{transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+    .nav.is-scrolled{box-shadow:0 8px 30px rgba(0,0,0,.06);background:rgba(243,238,231,.96)}
+    @media (prefers-reduced-motion:reduce){.tc-ribbon>div{animation:none}.reveal{opacity:1;transform:none}[data-parallax]{transform:none!important}}
+
     @media (max-width:1020px){
       .nav-inner{grid-template-columns:1fr auto}
       .nav-links,.nav-actions .call-link{display:none}
@@ -568,6 +603,11 @@
       .booking-inner{align-items:flex-start;flex-direction:column}
       .booking-actions{justify-content:flex-start}
       .footer-grid{grid-template-columns:1fr 1fr}
+      .event-layout{grid-template-columns:1fr}
+      .event-photo,.event-photo img{min-height:420px}
+      .contact-grid{grid-template-columns:1fr;gap:32px}
+      .about-tiles{grid-template-columns:1fr 1fr}
+      .about-tile:last-child{grid-column:span 2}
     }
 
     @media (max-width:760px){
@@ -606,6 +646,10 @@
       .map-card{min-height:380px}
       footer{padding-bottom:120px}
       .footer-grid{grid-template-columns:1fr}
+      .event-photo,.event-photo img{min-height:340px}
+      .about-tiles{grid-template-columns:1fr}
+      .about-tile,.about-tile:last-child{grid-column:auto;min-height:380px}
+      .contact-grid h2{font-size:clamp(60px,17vw,92px)}
       .mobile-rail{display:block}
       .btn{min-height:46px}
     }
@@ -670,6 +714,7 @@
     </div>
   </header>
 
+  <div class="tc-progress" id="scrollProgress" aria-hidden="true"></div>
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <img class="hero-media" src="https://r1imghtlak.mmtcdn.com/6ab623be-5fd5-43d1-b8d6-56f4dea24767.jpg" alt="Hotel Kishan facade on Supriya Cinema Road in Bettiah" fetchpriority="high">
@@ -697,8 +742,10 @@
       </div>
     </section>
 
+    <section class="tc-ribbon" aria-label="Hotel Kishan services"><div>STAY <i>·</i> DINE <i>·</i> GATHER <i>·</i> CELEBRATE <i>·</i> STAY <i>·</i> DINE <i>·</i> GATHER <i>·</i> CELEBRATE <i>·</i></div></section>
+
     <section class="section">
-      <div class="shell story-grid">
+      <div class="shell story-grid" data-reveal>
         <div class="story-image reveal">
           <img src="https://r1imghtlak.mmtcdn.com/2f29580d-c235-4cc3-b550-19943547c110.jpg" alt="Guest room at Hotel Kishan with a padded headboard, two beds and warm bedside lamps" loading="lazy">
           <div class="story-tag">PUBLIC PROPERTY PHOTO · ROOM</div>
@@ -917,8 +964,55 @@
       </div>
     </section>
 
+    <section id="events" class="section event-section">
+      <div class="shell">
+        <div class="section-head reveal" data-reveal>
+          <div><div class="micro eyebrow">GATHER</div><h2 class="serif">Make room for a gathering.</h2></div>
+          <p>The public property facade includes banquet signage. Contact the hotel directly to confirm event availability, capacity, facilities and arrangements.</p>
+        </div>
+        <div class="event-layout">
+          <div class="event-photo reveal" data-reveal><img data-parallax src="https://r1imghtlak.mmtcdn.com/6ab623be-5fd5-43d1-b8d6-56f4dea24767.jpg" alt="Hotel Kishan facade with property signage" loading="lazy"></div>
+          <div class="event-note reveal" data-reveal>
+            <div class="micro" style="color:#d6b083">EVENT ENQUIRIES</div>
+            <h3 class="serif">Your people.<br>One place.</h3>
+            <p>Share your date, guest count and preferred setup with the hotel team. All event details need to be confirmed directly.</p>
+            <a class="btn btn-light" href="tel:+919973211516">Call about an event</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="shell">
+        <div class="section-head reveal" data-reveal>
+          <div><div class="micro eyebrow">HOTEL KISHAN · BETTIAH</div><h2 class="serif">A place to stay.<br><em>A table to gather.</em></h2></div>
+          <p>Hotel Kishan brings together guest rooms and on-property dining on Supriya Cinema Road in Bettiah. Reach the property directly for current details and arrangements.</p>
+        </div>
+        <div class="about-tiles">
+          <a class="about-tile reveal" data-reveal href="#stay"><img data-parallax src="https://r1imghtlak.mmtcdn.com/2f29580d-c235-4cc3-b550-19943547c110.jpg" alt="Guest room at Hotel Kishan" loading="lazy"><span>01 / STAY</span><strong>Find your<br><em>room.</em></strong><b>Explore rooms ↗</b></a>
+          <a class="about-tile reveal" data-reveal href="#dining"><img data-parallax src="https://r1imghtlak.mmtcdn.com/6ab623be-5fd5-43d1-b8d6-56f4dea24767.jpg" alt="Hotel Kishan facade and dining signage" loading="lazy"><span>02 / DINE</span><strong>Gather over<br><em>good food.</em></strong><b>Explore dining ↗</b></a>
+          <a class="about-tile reveal" data-reveal href="#gallery"><img data-parallax src="https://r1imghtlak.ibcdn.com/76773e99-89c5-458e-9ce1-23f6d9d8117a.jpg?crop=520%3A350%3B0%2C215&downsize=520%3A350&output-format=webp&output-quality=75" alt="Hotel Kishan property listing photograph" loading="lazy"><span>03 / THE SPACE</span><strong>Take a look<br><em>around.</em></strong><b>View gallery ↗</b></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section dark">
+      <div class="shell contact-grid">
+        <div class="reveal" data-reveal>
+          <div class="micro" style="color:#d6b083">GET IN TOUCH</div>
+          <h2 class="serif">Make your<br><em>next move.</em></h2>
+          <p>For room availability, dining, event details or directions, contact Hotel Kishan directly. Online booking partners handle live room rates and inventory.</p>
+        </div>
+        <div class="contact-actions reveal" data-reveal>
+          <a class="contact-line" href="tel:+919973211516"><span>PRIMARY PHONE</span><strong>+91 99732 11516</strong><i>↗</i></a>
+          <a class="contact-line" href="tel:+916254233188"><span>ALTERNATE PHONE</span><strong>+91 6254 233188</strong><i>↗</i></a>
+          <a class="contact-line" href="https://www.google.com/maps/search/?api=1&query=HOTEL%20KISHAN%2C%20Supriya%20Cinema%20Road%2C%20Bettiah%2C%20Bihar%20845438" target="_blank" rel="noopener noreferrer"><span>VISIT</span><strong>Open directions</strong><i>↗</i></a>
+        </div>
+      </div>
+    </section>
+
     <section id="location" class="section">
-      <div class="shell location-grid">
+      <div class="shell location-grid" data-reveal>
         <div class="location-copy reveal">
           <div class="micro eyebrow">LOCATION</div>
           <h2 class="serif">Find your way.</h2>
@@ -945,7 +1039,7 @@
     </section>
 
     <section class="booking-strip">
-      <div class="shell booking-inner">
+      <div class="shell booking-inner" data-reveal>
         <div>
           <div class="micro" style="color:#d6b083">BOOKING</div>
           <h2>Your stay starts in Bettiah.</h2>
@@ -1035,6 +1129,9 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
   <script>
     (function(){
       "use strict";
@@ -1197,28 +1294,72 @@
       });
 
       var revealNodes = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var progressBar = document.getElementById("scrollProgress");
+      var navHeader = document.querySelector("header.nav");
+      function updateScrollChrome(){
+        var doc = document.documentElement;
+        var maxScroll = Math.max(1,doc.scrollHeight-window.innerHeight);
+        if(progressBar) progressBar.style.transform = "scaleX("+Math.min(1,(window.scrollY||0)/maxScroll)+")";
+        if(navHeader) navHeader.classList.toggle("is-scrolled",(window.scrollY||0)>24);
+      }
+      window.addEventListener("scroll",updateScrollChrome,{passive:true});
+      window.addEventListener("resize",updateScrollChrome);
+      updateScrollChrome();
+
       if("IntersectionObserver" in window){
         var observer = new IntersectionObserver(function(entries,obs){
           entries.forEach(function(entry){
-            if(entry.isIntersecting){
-              entry.target.classList.add("in");
-              obs.unobserve(entry.target);
-            }
+            if(entry.isIntersecting){entry.target.classList.add("in");obs.unobserve(entry.target);}
           });
         },{threshold:.12});
-        revealNodes.forEach(function(node){ observer.observe(node); });
+        revealNodes.forEach(function(node){observer.observe(node);});
+      } else revealNodes.forEach(function(node){node.classList.add("in");});
+
+      if(!reduceMotion && window.gsap && window.ScrollTrigger){
+        gsap.registerPlugin(ScrollTrigger);
+        var lenis=null;
+        if(window.Lenis){
+          try{
+            lenis=new Lenis({duration:1.1,smoothWheel:true});
+            lenis.on("scroll",ScrollTrigger.update);
+            gsap.ticker.add(function(time){lenis.raf(time*1000);});
+            gsap.ticker.lagSmoothing(0);
+          }catch(e){lenis=null;}
+        }
+        document.querySelectorAll("main > section, main > .section").forEach(function(section){
+          var items=Array.prototype.slice.call(section.querySelectorAll(".reveal"));
+          if(items.length){
+            gsap.fromTo(items,{y:58,autoAlpha:0,filter:"blur(5px)"},{
+              y:0,autoAlpha:1,filter:"blur(0px)",duration:1,stagger:.11,ease:"power3.out",
+              clearProps:"transform,opacity,visibility,filter",
+              scrollTrigger:{trigger:section,start:"top 88%",once:true,invalidateOnRefresh:true}
+            });
+          }
+        });
+        document.querySelectorAll("[data-parallax]").forEach(function(el){
+          gsap.fromTo(el,{yPercent:-7,scale:1.06},{yPercent:7,scale:1,ease:"none",
+            scrollTrigger:{trigger:el.closest(".section")||el,start:"top bottom",end:"bottom top",scrub:1.15}});
+        });
+        document.querySelectorAll(".about-tile").forEach(function(card,i){
+          gsap.fromTo(card,{y:45},{y:i===1?-14:0,ease:"none",
+            scrollTrigger:{trigger:".about-tiles",start:"top 90%",end:"bottom 35%",scrub:1.1}});
+        });
+        document.querySelectorAll(".amenity").forEach(function(card,i){
+          gsap.fromTo(card,{y:24,autoAlpha:0},{y:0,autoAlpha:1,duration:.65,delay:(i%3)*.06,ease:"power2.out",
+            scrollTrigger:{trigger:card.closest(".amenities"),start:"top 88%",once:true}});
+        });
+        requestAnimationFrame(function(){ScrollTrigger.refresh();});
+        window.addEventListener("load",function(){ScrollTrigger.refresh();},{once:true});
       } else {
-        revealNodes.forEach(function(node){ node.classList.add("in"); });
+        document.querySelectorAll("[data-parallax]").forEach(function(el){el.style.transform="none";});
       }
 
-      var heroMedia = document.querySelector(".hero-media");
-      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if(!reduceMotion){
-        window.addEventListener("scroll", function(){
-          var y = window.scrollY || 0;
-          if(y < 900){
-            heroMedia.style.transform = "translateY(" + (y * 0.08) + "px) scale(1.03)";
-          }
+      var heroMedia=document.querySelector(".hero-media");
+      if(!reduceMotion && heroMedia && !(window.gsap && window.ScrollTrigger)){
+        window.addEventListener("scroll",function(){
+          var y=window.scrollY||0;
+          if(y<900) heroMedia.style.transform="translateY("+(y*.08)+"px) scale(1.03)";
         },{passive:true});
       }
 
