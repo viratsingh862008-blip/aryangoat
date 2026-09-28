@@ -1,15 +1,20 @@
-# Kishan Hotel — Website
+# Kishan Hotel — Immersive Hospitality Website
 
-A responsive, editorial-style hotel website inspired by the immersive storytelling and motion approach of ERA Residence.
+An original, responsive hotel website with a cinematic editorial design inspired by the visual language of contemporary boutique hospitality sites.
 
-## Stack
-- Semantic HTML and CSS
-- Vanilla JavaScript
-- GSAP + ScrollTrigger for motion
-- Google Fonts and remote photography placeholders
+## Experience
+- Large photographic hero and editorial typography
+- Day/night appearance toggle
+- Scroll-reveal motion and animated marquee
+- Room showcase, hospitality highlights, gallery, location story, and enquiry form
+- Mobile navigation and sticky mobile call-to-action
+- Vanilla HTML, CSS, and JavaScript; no framework or external UI dependency
 
-## Run
-Serve the repository root with any static web server. The project is intentionally lightweight and does not include an admin panel, CMS, booking backend, or database.
+## Local preview
+Serve the repository root with any static web server, or open `index.html` directly in a browser.
 
-## Before launch
-Replace sample photography with licensed hotel imagery, update room descriptions and property details, and connect the enquiry CTA to a verified booking/contact destination. The current mail link is intentionally not wired to an address.
+## Important
+This is a front-end concept. Room names, imagery, and narrative are illustrative. The enquiry form is not connected to a booking service and does not transmit or store submissions. Replace imagery with licensed hotel-owned photos, confirm property details, and connect a real booking/contact endpoint before production.
+
+## Test
+`npm test`

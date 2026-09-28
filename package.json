@@ -1,1 +1,13 @@
-{"name":"kishan-hotel","version":"1.0.0","private":true,"description":"Kishan Hotel editorial hospitality website","scripts":{"start":"npx serve ."},"devDependencies":{}}
+{
+  "name": "kishan-hotel-experience",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "An editorial, immersive hospitality website for Kishan Hotel.",
+  "scripts": {
+    "test": "node --test tests/site.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
