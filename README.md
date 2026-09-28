@@ -1,19 +1,15 @@
-# SUPER ARYAN — Hotel Parth Bettiah
+# Kishan Hotel — Website
 
-High-detail hospitality experience website for Hotel Parth, Bettiah.
+A responsive, editorial-style hotel website inspired by the immersive storytelling and motion approach of ERA Residence.
 
-## Included
-- Editorial/cinematic responsive landing experience
-- Public Google/OYO/Justdial/Zomato/Swiggy data integrated
-- Current OYO naming note: Hotel O Parth, serviced under the trade name Hotel Parth
-- Classic room section, amenities, dining, gallery and location
-- Booking/enquiry form with a serverless backend endpoint at /api/enquiry
-- Mobile call/book/enquiry bar
-- Production source links and media-rights note
+## Stack
+- Semantic HTML and CSS
+- Vanilla JavaScript
+- GSAP + ScrollTrigger for motion
+- Google Fonts and remote photography placeholders
 
-## Verification
-Run:
-npm test
+## Run
+Serve the repository root with any static web server. The project is intentionally lightweight and does not include an admin panel, CMS, booking backend, or database.
 
-## Production
-Replace public third-party photography with hotel-owned/licensed media, re-confirm current rates/policies/contact details, and connect /api/enquiry to the hotel's mailbox or CRM.
+## Before launch
+Replace sample photography with licensed hotel imagery, update room descriptions and property details, and connect the enquiry CTA to a verified booking/contact destination. The current mail link is intentionally not wired to an address.
